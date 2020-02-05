@@ -1,0 +1,1 @@
+- the GITHUB_TOKEN is stored in plain text in StaticSitesPayload.json

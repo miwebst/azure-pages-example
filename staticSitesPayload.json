@@ -1,0 +1,10 @@
+{
+  "location": "westus",
+  "properties": {
+    "repositoryUrl": "https://github.com/nitrooo/website",
+    "branch": "master",
+    "createOrUpdateWorkflow": "true",
+    "repositoryToken": "4741cdb8da21142a28cec2fcb4ce8efe77a875b1"
+  },
+  "sku": { "Name": "Standard", "Tier": "Standard" }
+}
