@@ -1,9 +1,9 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "version": 1, 
+  "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "azure-static-sites-demo": {
+    "azure-pages-demo": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:class": {
@@ -38,7 +38,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/azure-static-sites-demo",
+            "outputPath": "dist/azure-pages-demo",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -87,21 +87,25 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "azure-static-sites-demo:build"
+            "browserTarget": "azure-pages-demo:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "azure-static-sites-demo:build:production"
+              "browserTarget": "azure-pages-demo:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "azure-static-sites-demo:build"
+            "browserTarget": "azure-pages-demo:build"
           }
         }
       }
-    }},
-  "defaultProject": "azure-static-sites-demo"
+    }
+  },
+  "defaultProject": "azure-pages-demo",
+  "cli": {
+    "analytics": false
+  }
 }
