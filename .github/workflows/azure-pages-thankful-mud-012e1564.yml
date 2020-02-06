@@ -20,14 +20,14 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 12.x
-      - run: cd ui && yarn && yarn build
+      - run: cd xlayers && yarn && yarn build
       - name: Build And Deploy
         id: azurepagesbuilddeploy
         uses: joslinmicrosoft/staticsitesactionoryx@master
         with:
           azure_pages_api_token: ${{ secrets.AZURE_PAGES_API_TOKEN_THANKFUL_MUD_012E1564 }}
           action: 'upload'
-          app_artifact_location: 'ui/dist/azure-pages-demo/' # App Content Path
+          app_artifact_location: 'xlayers/dist/html/' # App Content Path
           api_artifact_location: 'api' # Api Content Path - optional
 
   azure_pages_close_pull_request_job:
