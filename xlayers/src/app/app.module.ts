@@ -92,7 +92,7 @@ export function HttpLoaderFactory(http: HttpClient) {
       deps: [HttpClient]
   }}),
     RouterModule.forRoot(routes, {
-      useHash: true,
+      useHash: false,
       enableTracing: !environment.production,
       preloadingStrategy: PreloadAllModules
     }),

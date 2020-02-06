@@ -24,6 +24,8 @@ jobs:
         run: cd xlayers && yarn && yarn build
         env: 
           BUILD_ID: ${{ github.sha }}
+      - name: Copy routes config
+        run: cp xlayers/routes.json xlayers/dist/html
       - name: Build back-end
         run: cd api && npm ci && npm run build
       - name: Build And Deploy
