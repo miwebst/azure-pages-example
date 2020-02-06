@@ -21,6 +21,8 @@ jobs:
         with:
           node-version: 12.x
       - run: cd xlayers && yarn && yarn build
+        env: 
+          BUILD_ID: ${{ github.sha }}
       - name: Build And Deploy
         id: azurepagesbuilddeploy
         uses: joslinmicrosoft/staticsitesactionoryx@master
