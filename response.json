@@ -1,0 +1,17 @@
+{
+  "id": "/subscriptions/198cd413-7754-4cae-b7b4-048151e7bb79/resourceGroups/azure_static_sites_demo_westus/providers/Microsoft.Web/staticSites/armtest0",
+  "location": "West US",
+  "name": "armtest0",
+  "properties": {
+    "branch": "master",
+    "customDomains": [],
+    "defaultHostname": "proud-coast-01660914.staticsitescanary.net",
+    "repositoryUrl": "https://github.com/manekinekko/azure-static-sites-demo"
+  },
+  "resourceGroup": "azure_static_sites_demo_westus",
+  "sku": {
+    "name": "Standard",
+    "tier": "Standard"
+  },
+  "type": "Microsoft.Web/staticSites"
+}
