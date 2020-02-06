@@ -1,7 +1,7 @@
 {
   "location": "westus",
   "properties": {
-    "repositoryUrl": "https://github.com/manekinekko/azure-static-sites-demo",
+    "repositoryUrl": "https://github.com/manekinekko/azure-pages-example",
     "branch": "master",
     "createOrUpdateWorkflow": "true",
     "repositoryToken": "GITHUB_TOKEN"
