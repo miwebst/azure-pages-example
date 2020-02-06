@@ -20,17 +20,20 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 12.x
-      - run: cd xlayers && yarn && yarn build
+      - name: Build front-end
+        run: cd xlayers && yarn && yarn build
         env: 
           BUILD_ID: ${{ github.sha }}
+      - name: Build back-end
+        run: cd api && yarn && yarn build
       - name: Build And Deploy
         id: azurepagesbuilddeploy
         uses: joslinmicrosoft/staticsitesactionoryx@master
         with:
           azure_pages_api_token: ${{ secrets.AZURE_PAGES_API_TOKEN_THANKFUL_MUD_012E1564 }}
           action: 'upload'
-          app_artifact_location: 'xlayers/dist/html/' # App Content Path
-          api_artifact_location: 'api' # Api Content Path - optional
+          app_artifact_location: 'xlayers/dist/html/'
+          api_artifact_location: 'api/dist/index'
 
   azure_pages_close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
