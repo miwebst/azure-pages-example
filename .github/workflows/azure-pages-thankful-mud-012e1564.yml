@@ -15,7 +15,6 @@ jobs:
     runs-on: ubuntu-latest
     name: Azure Pages Build and Deploy Job
     steps:
-    - steps:
     - uses: actions/checkout@v2
     - name: Setup node 12
       uses: actions/setup-node@v1
