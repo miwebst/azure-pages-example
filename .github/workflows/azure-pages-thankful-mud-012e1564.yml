@@ -15,6 +15,15 @@ jobs:
     runs-on: ubuntu-latest
     name: Azure Pages Build and Deploy Job
     steps:
+    - steps:
+    - uses: actions/checkout@v2
+    - name: Setup node 12
+      uses: actions/setup-node@v1
+      with:
+        node-version: 12.x
+    - run: cd app
+    - run: npm ci
+    - run: npm run build
     - uses: actions/checkout@v1
     - name: Build And Deploy
       id: azurepagesbuilddeploy
