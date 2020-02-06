@@ -1,0 +1,17 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "@azure/functions": "^1.0.3",
+    "typescript": "^3.7.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "build": "tsc"
+  },
+  "keywords": [],
+  "author": "Wassim Chegham <wassim.dev>",
+  "license": "ISC"
+}
