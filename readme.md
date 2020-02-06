@@ -70,3 +70,4 @@ az rest \
 ### Notes
 - the GITHUB_TOKEN is stored in plain text in payload.json. DO NOT commit that to GitHub, otherwise the GitHub security bot will automatically delete your personal Token!
 - you can not change the repositoryUrl. You have to delete it and recreate.
+- function app inside the `api` needs to be built with Node.js LTS (even number: 8, 10, 12, etc.)
