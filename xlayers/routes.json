@@ -1,8 +1,12 @@
 {
   "routes": [
     {
+      "route": "/routes.json",
+      "serve": "/routes.json"
+    },
+    {
       "route": "/*",
-      "serve": "/index.not_found",
+      "serve": "/index.html",
       "statusCode": 200
     }
   ]
