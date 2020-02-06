@@ -28,5 +28,5 @@ import { Component } from '@angular/core';
   styles: []
 })
 export class AppComponent {
-  title = 'azure-static-sites-demo';
+  title = 'Azure Pages Demo';
 }
