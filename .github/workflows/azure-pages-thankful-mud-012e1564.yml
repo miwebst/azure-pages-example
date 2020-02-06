@@ -20,7 +20,7 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 12.x
-      - name: Build front-end
+      - name: Build frontend
         run: |
           cd xlayers
           yarn
@@ -30,16 +30,21 @@ jobs:
       - name: Copy routes config
         run: |
           cp xlayers/routes.json xlayers/dist/html
-      - name: Build back-end
-        run: |
-          cd api
-          npm ci
-          npm run build
-      - name: Archive production artifacts
+      - name: Archive frontend production artifacts
         uses: actions/upload-artifact@v1
         with:
           name: xlayers-${{ github.sha }}
           path: xlayers/dist/html
+      - name: Build backend
+        run: |
+          cd api
+          npm ci
+          npm run build
+      - name: Archive backend production artifacts
+        uses: actions/upload-artifact@v1
+        with:
+          name: api-${{ github.sha }}
+          path: api/dist/index
       - name: Build And Deploy
         id: azurepagesbuilddeploy
         uses: joslinmicrosoft/staticsitesactionoryx@master
