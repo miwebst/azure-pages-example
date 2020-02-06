@@ -5,7 +5,6 @@
     "outDir": "dist",
     "rootDir": ".",
     "sourceMap": true,
-    "strict": false,
-    "forceConsistentCasingInFileNames": true  /* Disallow inconsistently-cased references to the same file. */
+    "strict": false
   }
 }
