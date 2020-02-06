@@ -20,7 +20,7 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 12.x
-      - run: cd app && npm ci && npm run build
+      - run: cd app && yarn && yarn build
       - name: Build And Deploy
         id: azurepagesbuilddeploy
         uses: joslinmicrosoft/staticsitesactionoryx@master
