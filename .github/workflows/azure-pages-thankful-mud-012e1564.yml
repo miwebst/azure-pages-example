@@ -25,7 +25,7 @@ jobs:
         env: 
           BUILD_ID: ${{ github.sha }}
       - name: Build back-end
-        run: cd api && yarn && yarn build
+        run: cd api && npm ci && npm run build
       - name: Build And Deploy
         id: azurepagesbuilddeploy
         uses: joslinmicrosoft/staticsitesactionoryx@master
