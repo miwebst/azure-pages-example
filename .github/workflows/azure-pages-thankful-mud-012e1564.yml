@@ -38,6 +38,7 @@ jobs:
       - name: Build backend
         run: |
           cd api
+          npm i azure-functions-core-tools@2
           npm ci
           npm run build:production
       - name: Archive backend production artifacts
