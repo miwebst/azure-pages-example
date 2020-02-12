@@ -65,6 +65,7 @@ az rest \
 }
 ```
 7. Note down the URL that your app will be deployed at: xxxxxx.staticsitescanary.net
+8. The Azure Function will be available at xxxxxx.staticsitescanary.net/.api/<functionName>
 
 
 ### Notes
