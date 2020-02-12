@@ -39,8 +39,7 @@ jobs:
         run: |
           cd api
           npm ci
-          npm run build
-          npm prune --production
+          npm run build:production
       - name: Archive backend production artifacts
         uses: actions/upload-artifact@v1
         with:
@@ -53,7 +52,9 @@ jobs:
           azure_pages_api_token: ${{ secrets.AZURE_PAGES_API_TOKEN_THANKFUL_MUD_012E1564 }}
           action: 'upload'
           app_artifact_location: 'xlayers/dist/html/'
-          api_artifact_location: 'api'
+          # @todo ignore the api deployment for now. 
+          # Currently, the upload size limit is 30MB zipped.
+          api_artifact_location: ''
 
   azure_pages_close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
