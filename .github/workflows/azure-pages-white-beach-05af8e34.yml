@@ -23,7 +23,7 @@ jobs:
         azure_pages_api_token: ${{ secrets.AZURE_PAGES_API_TOKEN_WHITE_BEACH_05AF8E34 }}
         action: 'upload'
         app_location: 'xlayers' # App Source Code Path
-        api_location: 'api' # Api Source Code Path - optional
+        api_location: '' # Api Source Code Path - optional
         app_artifact_location: 'dist/html' # Built App Content Directory - optional
 
   close_pull_request_job:
