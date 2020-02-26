@@ -1,7 +1,7 @@
 
 ![Azure Pages CI](https://github.com/manekinekko/azure-static-sites-demo/workflows/Azure%20Pages%20CI/badge.svg)
 
-## {{Azure Pages}} demo app
+## {{Azure Pages}} demo app 2
 
 ### How to setup {{Azure Pages}}
 
