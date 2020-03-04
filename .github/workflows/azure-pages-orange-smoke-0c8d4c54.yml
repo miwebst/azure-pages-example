@@ -25,6 +25,8 @@ jobs:
         app_location: 'xlayers' # App Source Code Path
         api_location: 'api' # Api Source Code Path - optional
         app_artifact_location: '' # Built App Content Directory - optional
+      env:
+        BUILD_ID: 1
 
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
