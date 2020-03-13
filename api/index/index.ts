@@ -5,7 +5,7 @@ const index: AzureFunction = async function (context: Context, req: HttpRequest)
     context.res = {
         status: 200,
         body: {
-            message: "Hellow Azure Pages"
+            message: "Hello Azure Static Apps"
         }
     };
 };
