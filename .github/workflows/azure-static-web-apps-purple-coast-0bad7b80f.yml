@@ -28,6 +28,8 @@ jobs:
         api_location: 'random' # Api source code path - optional
         app_artifact_location: '' # Built app content directory - optional
         ###### End of Repository/Build Configurations ######
+      env:
+        BUILD_ID: 1
 
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
